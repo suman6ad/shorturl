@@ -13,6 +13,7 @@ http://rubyforge.org/frs/?group_id=732 if you do not want to use the gem.
 == Supported services
 Here is the list of the services supported by ShortURL:
 * http://tinyurl.com
+* https://cutyurl.com
 * http://shorl.com
 * http://snipurl.com
 * http://metamark.net
@@ -43,6 +44,7 @@ call-seq:
 
 The second parameter represents the service you want to use.  These are:
 * <tt>:tinyurl</tt>
+* <tt>:cutyurl</tt>
 * <tt>:shorl</tt>
 * <tt>:snipurl</tt>
 * <tt>:metamark</tt>
@@ -67,6 +69,23 @@ You can use <tt>ShortURL.valid_services</tt> to obtain a
 list of the valid services (in case I forget to update the
 documentation)
 
+CutyURL**
+-------
+🔑 1. Get Your API Key
+
+Sign up at CutyURL and you’ll receive an API key automatically 
+publicapi.dev
+
+This key must be sent with every request in the Authorization: Bearer YOUR_API_KEY header.
+
+2. Shorten a URL 
+curl -X POST \
+  'https://cutyurl.com/api/links' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type: application/json' \
+  -d '{"destination":"https://example.com"}'
+
+
 Bitly**
 -------
 
@@ -77,6 +96,8 @@ Bitly**
    1) Get yours easily right now from:
 
    http://bitly.com/a/your_api_key
+
+
 
 
    2) Save it in ~/.shorturl similar to this YAML template:
