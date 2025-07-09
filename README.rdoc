@@ -13,6 +13,7 @@ http://rubyforge.org/frs/?group_id=732 if you do not want to use the gem.
 == Supported services
 Here is the list of the services supported by ShortURL:
 * http://tinyurl.com
+* https://cutyurl.com
 * http://shorl.com
 * http://snipurl.com
 * http://metamark.net
@@ -43,6 +44,7 @@ call-seq:
 
 The second parameter represents the service you want to use.  These are:
 * <tt>:tinyurl</tt>
+* <tt>:cutyurl</tt>
 * <tt>:shorl</tt>
 * <tt>:snipurl</tt>
 * <tt>:metamark</tt>
